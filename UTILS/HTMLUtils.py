@@ -1,76 +1,54 @@
-from typing import List
-
+# UTILS/HTMLUtils.py
+import os
+from jinja2 import Environment, FileSystemLoader
 from UTILS import questionTypes
+
+env = Environment(loader=FileSystemLoader("assets/templates"))
+
+
+def prepare_options(question):
+    options = []
+    if question["questionType"] == "singleChoice":
+        question = questionTypes.randomizeSingleChoice(question)
+        for idx, option in enumerate(question["options"]):
+            options.append({"letter": chr(ord("A") + idx), "text": option})
+        question["correct_letter"] = chr(ord("A") + question["correct_option"])
+    elif question["questionType"] == "multipleChoice":
+        question = questionTypes.randomizeMultipleChoice(question)
+        for idx, option in enumerate(question["options"]):
+            options.append({"letter": chr(ord("A") + idx), "text": option})
+        correct_letters = sorted(
+            [chr(ord("A") + i) for i in question["correct_options"]]
+        )
+        question["correct_letter"] = ", ".join(correct_letters)
+    return options, question
 
 
 def examWriter(questions, fileOutName, style):
-
-    with open(style, "r", encoding="utf-8") as styleFile, open(
-        "UTILS/scripts/submitFormFunction.js", "r", encoding="utf-8"
-    ) as submitFormFile, open(
-        "UTILS/scripts/singleChoice.js", "r", encoding="utf-8"
-    ) as singleChoiceFile, open(
-        "UTILS/scripts/multipleChoice.js", "r", encoding="utf-8"
-    ) as multipleChoiceFile:
-
-        submitFormFunction = submitFormFile.read()
-        singleChoiceFunction = singleChoiceFile.read()
-        multipleChoiceFunction = multipleChoiceFile.read()
-        styles = styleFile.read()
-
-    html_head = f"""
-    <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>Examen</title>
-        <style>
-            {styles}     
-        </style>
-    </head>
-    <body>
-        <form id="testForm" onsubmit="return submitForm()">
-    """
-
-    html_tail = """
-            <input id="submitButton" type="submit" value="Enviar respuestas">
-        </form>
-        <p id="scoreDisplay"></p>
-    </body>
-    </html>
-    """
-
-    fileOut = open(fileOutName, "w", encoding="utf-8")
-    fileOut.write(html_head)
-
-    for questionNumber, question in enumerate(questions):
-        """
-        ##########################################################
-        Here is where we would check the question type and generate the HTML accordingly.
-        ##########################################################
-        """
-        if question["questionType"] == "singleChoice":
-            fileOut.write(questionTypes.singleChoiceWriter(question, questionNumber))
-
-        elif question["questionType"] == "multipleChoice":
-            fileOut.write(questionTypes.multipleChoiceWriter(question, questionNumber))
-
-        else:
-            print("Tipo de pregunta no implementado")
-
-    fileOut.write(html_tail)
-    fileOut.write(
-        combineFunctions(
-            [submitFormFunction, singleChoiceFunction, multipleChoiceFunction]
+    base_template = env.get_template("base.html")
+    question_blocks = []
+    # Mapeo para traducir el valor de questionType a nombre de plantilla
+    TEMPLATE_MAP = {
+        "singleChoice": "question_single.html",
+        "multipleChoice": "question_multiple.html",
+    }
+    for idx, question in enumerate(questions):
+        options, question = prepare_options(question)
+        q_template_name = TEMPLATE_MAP.get(
+            question["questionType"], f"question_{question['questionType']}.html"
         )
+        q_template = env.get_template(q_template_name)
+        question_html = q_template.render(
+            question_number=idx + 1,
+            question_text=question["question"],
+            options=options,
+            correct_letter=question.get("correct_letter", "A"),
+            folder=question.get("folder", ""),
+        )
+        question_blocks.append(question_html)
+
+    output = base_template.render(
+        questions_html="\n".join(question_blocks), style=style
     )
-    fileOut.close()
-
-
-def combineFunctions(functions: List[str]) -> str:
-    # Join the list of functions into a single string
-    combinedFunctions = "\n".join(functions)
-
-    # Wrap the combined functions in a <script> tag
-    combinedScript = f"<script>\n{combinedFunctions}\n</script>"
-
-    return combinedScript
+    with open(fileOutName, "w", encoding="utf-8") as f:
+        f.write(output)

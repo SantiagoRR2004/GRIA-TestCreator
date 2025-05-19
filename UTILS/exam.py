@@ -46,8 +46,8 @@ def examGenerator(
         )
         # Randomize the order of the questions
         shuffle(questions)
-        HTMLUtils.examWriter(questions, "./ExamenTest" + str(exam + 1) + ".html", css)
+        HTMLUtils.examWriter(questions, f"./ExamenTest{exam+1}.html", css)
 
     # If the number of exams is 1, we open the exam in the browser
     if numberOfExams == 1:
-        webbrowser.open("./ExamenTest" + str(exam + 1) + ".html")
+        webbrowser.open(f"./ExamenTest{exam+1}.html")
