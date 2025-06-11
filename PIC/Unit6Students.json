@@ -57,34 +57,19 @@
     },
     {
       "question": "¿Qué tecnología se emplea en sistemas híbridos de procesamiento de datos?",
-      "options": [
-        "MySQL.",
-        "Apache Spark.",
-        "Microsoft SQL Server.",
-        "Redis."
-      ],
+      "options": ["MySQL.", "Apache Spark.", "Microsoft SQL Server.", "Redis."],
       "correct_options": [1],
       "questionType": "multipleChoice"
     },
     {
       "question": "¿Cuál de los siguientes es un componente clave de Apache Hadoop?",
-      "options": [
-        "GraphX.",
-        "Spark Streaming.",
-        "HDFS.",
-        "Redis."
-      ],
+      "options": ["GraphX.", "Spark Streaming.", "HDFS.", "Redis."],
       "correct_options": [2],
       "questionType": "multipleChoice"
     },
     {
       "question": "¿Cuál de las siguientes bases de datos es un ejemplo de NoSQL basada en documentos?",
-      "options": [
-        "MySQL.",
-        "PostgreSQL.",
-        "MongoDB.",
-        "Oracle Database."
-      ],
+      "options": ["MySQL.", "PostgreSQL.", "MongoDB.", "Oracle Database."],
       "correct_options": [2],
       "questionType": "multipleChoice"
     },
@@ -101,12 +86,7 @@
     },
     {
       "question": "¿Cuál de las siguientes bases de datos se almacena completamente en RAM para ofrecer acceso rápido?",
-      "options": [
-        "TimescaleDB.",
-        "Redis.",
-        "PostgreSQL.",
-        "Cassandra."
-      ],
+      "options": ["TimescaleDB.", "Redis.", "PostgreSQL.", "Cassandra."],
       "correct_options": [1],
       "questionType": "multipleChoice"
     },
@@ -178,12 +158,7 @@
     },
     {
       "question": "¿Qué ontología describe sensores y sus observaciones para interoperabilidad en IoT?",
-      "options": [
-        "IoT-O.",
-        "SSN.",
-        "WoT (Web of Things).",
-        "JSON-LD."
-      ],
+      "options": ["IoT-O.", "SSN.", "WoT (Web of Things).", "JSON-LD."],
       "correct_options": [1],
       "questionType": "multipleChoice"
     },
@@ -255,12 +230,7 @@
     },
     {
       "question": "¿Cuál de las siguientes características del Big Data es fundamental para garantizar la fiabilidad de los datos en IoT?",
-      "options": [
-        "Volumen.",
-        "Velocidad.",
-        "Variedad.",
-        "Veracidad."
-      ],
+      "options": ["Volumen.", "Velocidad.", "Variedad.", "Veracidad."],
       "correct_options": [3],
       "questionType": "multipleChoice"
     },
