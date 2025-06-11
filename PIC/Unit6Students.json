@@ -1,0 +1,323 @@
+{
+  "questions": [
+    {
+      "question": "¿Cuál de las siguientes es una característica de las bases de datos relacionales?",
+      "options": [
+        "Uso de documentos JSON.",
+        "Almacenamiento en tablas relacionadas mediante claves.",
+        "Escalabilidad horizontal sin esquemas fijos.",
+        "Procesamiento en tiempo real."
+      ],
+      "correct_options": [1],
+      "questionType": "multipleChoice"
+    },
+    {
+      "question": "¿Qué framework de código abierto permite procesamiento distribuido y en memoria, siendo más rápido que Hadoop?",
+      "options": [
+        "Apache Storm.",
+        "Apache Flink.",
+        "Apache Spark.",
+        "Apache Kafka."
+      ],
+      "correct_options": [2],
+      "questionType": "multipleChoice"
+    },
+    {
+      "question": "¿Qué característica define al filtro de Bloom?",
+      "options": [
+        "Nunca tiene falsos positivos.",
+        "Usa funciones hash para comprobar la pertenencia a un conjunto.",
+        "Almacena datos en una base de datos NoSQL.",
+        "No se usa en sistemas de IoT."
+      ],
+      "correct_options": [1],
+      "questionType": "multipleChoice"
+    },
+    {
+      "question": "¿Cuál es una de las aplicaciones del filtro de Kalman?",
+      "options": [
+        "Procesamiento de datos en caché.",
+        "Gestión de bases de datos NoSQL.",
+        "Seguimiento de objetos en sistemas de radar.",
+        "Procesamiento en lotes de grandes volúmenes de datos."
+      ],
+      "correct_options": [2],
+      "questionType": "multipleChoice"
+    },
+    {
+      "question": "¿Qué tipo de procesamiento se caracteriza por su baja latencia y escalabilidad flexible?",
+      "options": [
+        "Batch Processing.",
+        "Edge Processing.",
+        "SQL Processing.",
+        "Hadoop Processing."
+      ],
+      "correct_options": [1],
+      "questionType": "multipleChoice"
+    },
+    {
+      "question": "¿Qué tecnología se emplea en sistemas híbridos de procesamiento de datos?",
+      "options": [
+        "MySQL.",
+        "Apache Spark.",
+        "Microsoft SQL Server.",
+        "Redis."
+      ],
+      "correct_options": [1],
+      "questionType": "multipleChoice"
+    },
+    {
+      "question": "¿Cuál de los siguientes es un componente clave de Apache Hadoop?",
+      "options": [
+        "GraphX.",
+        "Spark Streaming.",
+        "HDFS.",
+        "Redis."
+      ],
+      "correct_options": [2],
+      "questionType": "multipleChoice"
+    },
+    {
+      "question": "¿Cuál de las siguientes bases de datos es un ejemplo de NoSQL basada en documentos?",
+      "options": [
+        "MySQL.",
+        "PostgreSQL.",
+        "MongoDB.",
+        "Oracle Database."
+      ],
+      "correct_options": [2],
+      "questionType": "multipleChoice"
+    },
+    {
+      "question": "¿Qué característica distingue a las bases de datos de series temporales?",
+      "options": [
+        "Uso exclusivo de claves primarias y foráneas.",
+        "Procesamiento de datos en memoria RAM.",
+        "Optimización para datos con marcas de tiempo.",
+        "Uso de estructuras de clave-valor."
+      ],
+      "correct_options": [2],
+      "questionType": "multipleChoice"
+    },
+    {
+      "question": "¿Cuál de las siguientes bases de datos se almacena completamente en RAM para ofrecer acceso rápido?",
+      "options": [
+        "TimescaleDB.",
+        "Redis.",
+        "PostgreSQL.",
+        "Cassandra."
+      ],
+      "correct_options": [1],
+      "questionType": "multipleChoice"
+    },
+    {
+      "question": "¿Cuál es el principal objetivo del Machine Learning (ML) en IoT?",
+      "options": [
+        "Reemplazar todos los sensores por algoritmos.",
+        "Aprender de los datos para mejorar el rendimiento sin programación explícita.",
+        "Eliminar la necesidad de almacenamiento en la nube.",
+        "Reducir el consumo energético de los dispositivos."
+      ],
+      "correct_options": [1],
+      "questionType": "multipleChoice"
+    },
+    {
+      "question": "¿Qué tipo de aprendizaje de ML se usa cuando los datos están etiquetados?",
+      "options": [
+        "Aprendizaje no supervisado.",
+        "Aprendizaje por refuerzo.",
+        "Aprendizaje supervisado.",
+        "Deep Learning."
+      ],
+      "correct_options": [2],
+      "questionType": "multipleChoice"
+    },
+    {
+      "question": "¿Qué fase del modelo CRISP-DM se enfoca en la limpieza y transformación de datos?",
+      "options": [
+        "Comprensión del problema.",
+        "Preparación de los datos.",
+        "Modelado.",
+        "Evaluación."
+      ],
+      "correct_options": [1],
+      "questionType": "multipleChoice"
+    },
+    {
+      "question": "¿Cuál es un desafío técnico del ML en IoT?",
+      "options": [
+        "Diversidad de formatos y fuentes de datos.",
+        "Falta de dispositivos IoT en el mercado.",
+        "Ausencia de protocolos de comunicación.",
+        "Bajo volumen de datos generados."
+      ],
+      "correct_options": [0],
+      "questionType": "multipleChoice"
+    },
+    {
+      "question": "¿Qué herramienta de desarrollo IoT es visual y basada en flujos?",
+      "options": [
+        "Eclipse Kura.",
+        "Node-RED.",
+        "TensorFlow Lite.",
+        "Apache Kafka."
+      ],
+      "correct_options": [1],
+      "questionType": "multipleChoice"
+    },
+    {
+      "question": "¿Qué capa de la arquitectura VITAL se encarga del procesamiento en tiempo real con herramientas como Apache Spark?",
+      "options": [
+        "Capa de recolección de datos.",
+        "Capa de gestión de datos.",
+        "Capa de procesamiento y análisis.",
+        "Capa de aplicación."
+      ],
+      "correct_options": [2],
+      "questionType": "multipleChoice"
+    },
+    {
+      "question": "¿Qué ontología describe sensores y sus observaciones para interoperabilidad en IoT?",
+      "options": [
+        "IoT-O.",
+        "SSN.",
+        "WoT (Web of Things).",
+        "JSON-LD."
+      ],
+      "correct_options": [1],
+      "questionType": "multipleChoice"
+    },
+    {
+      "question": "En el contexto del IoT, la capacidad de los dispositivos para generar grandes volúmenes de datos plantea un reto importante en términos de procesamiento y almacenamiento. ¿Cuál de las siguientes estrategias es más efectiva para abordar este desafío?",
+      "options": [
+        "Reducir la cantidad de dispositivos conectados para minimizar la generación de datos.",
+        "Convertir todos los datos en formatos no estructurados para facilitar su análisis.",
+        "Almacenar todos los datos generados en servidores locales para su análisis posterior.",
+        "Implementar técnicas de procesamiento en el borde para filtrar y analizar datos antes de enviarlos a la nube."
+      ],
+      "correct_options": [3],
+      "questionType": "multipleChoice"
+    },
+    {
+      "question": "¿Cuál es una ventaja de usar SaaS en IoT?",
+      "options": [
+        "Requiere desarrollo personalizado para cada dispositivo.",
+        "Permite gestionar dispositivos sin necesidad de programación avanzada.",
+        "Solo funciona con bases de datos SQL.",
+        "No es escalable."
+      ],
+      "correct_options": [1],
+      "questionType": "multipleChoice"
+    },
+    {
+      "question": "¿Cuál de los siguientes es un ejemplo de aprendizaje por refuerzo en IoT?",
+      "options": [
+        "Un termostato que ajusta la temperatura basado en preferencias históricas del usuario.",
+        "Un dron que optimiza su ruta en tiempo real mediante prueba y error con retroalimentación del entorno.",
+        "Un sistema de clustering que agrupa electrodomésticos por patrones de consumo energético.",
+        "Un modelo de regresión lineal que predice fallos en motores industriales."
+      ],
+      "correct_options": [1],
+      "questionType": "multipleChoice"
+    },
+    {
+      "question": "Según el modelo CRISP-DM aplicado a IoT, ¿qué fase incluye la \"aplicación de técnicas como clustering o reglas de asociación\"?",
+      "options": [
+        "Comprensión del problema.",
+        "Comprensión de los datos.",
+        "Modelado.",
+        "Despliegue."
+      ],
+      "correct_options": [2],
+      "questionType": "multipleChoice"
+    },
+    {
+      "question": "En un sistema IoT aplicado a la industria manufacturera, ¿qué combinación de técnicas de análisis de datos sería más adecuada para optimizar el rendimiento y evitar fallos en la maquinaria?",
+      "options": [
+        "Análisis descriptivo y diagnóstico.",
+        "Solo análisis descriptivo, ya que basta con conocer los datos históricos.",
+        "Análisis predictivo y prescriptivo.",
+        "Exclusivamente análisis de datos en tiempo real sin modelos predictivos."
+      ],
+      "correct_options": [2],
+      "questionType": "multipleChoice"
+    },
+    {
+      "question": "¿Cuál de las siguientes afirmaciones describe mejor el papel de la analítica de datos en IoT?",
+      "options": [
+        "Se centra exclusivamente en el almacenamiento de datos generados por dispositivos IoT.",
+        "Se usa principalmente para reducir la cantidad de datos recopilados.",
+        "Permite convertir grandes volúmenes de datos en conocimiento útil para optimizar procesos y predecir fallos.",
+        "No es relevante para la seguridad en sistemas IoT."
+      ],
+      "correct_options": [2],
+      "questionType": "multipleChoice"
+    },
+    {
+      "question": "¿Cuál de las siguientes características del Big Data es fundamental para garantizar la fiabilidad de los datos en IoT?",
+      "options": [
+        "Volumen.",
+        "Velocidad.",
+        "Variedad.",
+        "Veracidad."
+      ],
+      "correct_options": [3],
+      "questionType": "multipleChoice"
+    },
+    {
+      "question": "¿Por qué la interoperabilidad es un desafío clave en la analítica de IoT",
+      "options": [
+        "Porque los dispositivos IoT suelen utilizar distintos protocolos y formatos de datos.",
+        "Porque el volumen de datos generados es demasiado grande para ser procesado.",
+        "Porque la velocidad de transmisión de datos es demasiado lenta para la analítica en tiempo real.",
+        "Porque los datos generados por IoT siempre están estructurados y organizados."
+      ],
+      "correct_options": [0],
+      "questionType": "multipleChoice"
+    },
+    {
+      "question": "¿Cuál es el principal problema de aplicar modelos tradicionales de Big Data en la analítica de IoT?",
+      "options": [
+        "Los modelos tradicionales no pueden manejar grandes volúmenes de datos.",
+        "No pueden procesar datos estructurados provenientes de bases de datos relacionales.",
+        "Solo funcionan con datos almacenados en servidores físicos y no en la nube.",
+        "No están optimizados para datos en tiempo real con alta velocidad y variabilidad."
+      ],
+      "correct_options": [3],
+      "questionType": "multipleChoice"
+    },
+    {
+      "question": "En un sistema de IoT que monitorea infraestructura crítica, ¿qué tipo de análisis es más adecuado para prevenir fallos catastróficos?",
+      "options": [
+        "Análisis descriptivo basado en informes históricos de fallos previos.",
+        "Análisis prescriptivo que utiliza modelos de optimización y simulación para sugerir acciones preventivas.",
+        "Análisis diagnóstico que revisa patrones pasados después de que ocurren los fallos.",
+        "Análisis descriptivo con visualización de tendencias sin predicción futura."
+      ],
+      "correct_options": [1],
+      "questionType": "multipleChoice"
+    },
+    {
+      "question": "¿Cuál de los siguientes ejemplos corresponde a datos semi-estructurados en IoT?",
+      "options": [
+        "Registros de temperatura almacenados en una hoja de cálculo sin formato predefinido.",
+        "Videos de cámaras de seguridad en un sistema IoT.",
+        "Datos almacenados en bases de datos SQL con un esquema predefinido.",
+        "Datos de sensores en formato JSON o XML con etiquetas organizadas."
+      ],
+      "correct_options": [3],
+      "questionType": "multipleChoice"
+    },
+    {
+      "question": "¿Cuál de las siguientes afirmaciones sobre el ciclo de vida de los datos en IoT es incorrecta?",
+      "options": [
+        "El almacenamiento de datos en IoT se realiza exclusivamente en servidores locales para reducir latencia.",
+        "La etapa de generación y adquisición de datos implica el uso de sensores y dispositivos conectados.",
+        "La transmisión de datos puede realizarse a través de redes cableadas o inalámbricas, dependiendo de la aplicación.",
+        "La visualización de datos permite a los usuarios interpretar información a través de dashboards y reportes."
+      ],
+      "correct_options": [0],
+      "questionType": "multipleChoice"
+    }
+  ]
+}
