@@ -1,0 +1,334 @@
+{
+    "questions": [
+        {
+            "question": "¿Qué permite el IoT en la atención médica?",
+            "options": [
+                "Diagnóstico remoto.",
+                "Menor uso de sensores.",
+                "Aumento de costos.",
+                "Mayor cantidad de médicos."
+            ],
+            "correct_options": [0],
+            "questionType": "multipleChoice."
+        },
+        {
+            "question": "¿Cuál es el verdadero valor del IoT para las empresas?",
+            "options": [
+                "Los datos.",
+                "La conectividad.",
+                "Los sensores.",
+                "La robótica."
+            ],
+            "correct_options": [0],
+            "questionType": "multipleChoice."
+        },
+        {
+            "question": "¿Cuál es la principal diferencia entre IoT e IIoT?",
+            "options": [
+                "El IoT es más costoso.",
+                "El IIoT no requiere internet.",
+                "El IIoT se aplica en el ámbito industrial.",
+                "El IoT no usa sensores."
+            ],
+            "correct_options": [2],
+            "questionType": "multipleChoice."
+        },
+        {
+            "question": "¿Qué buscan optimizar las ciudades inteligentes mediante IoT?",
+            "options": [
+                "Recursos urbanos.",
+                "Redes sociales.",
+                "Educación tradicional.",
+                "Comercio internacional."
+            ],
+            "correct_options": [0],
+            "questionType": "multipleChoice."
+        },
+        {
+            "question": "¿Qué hacen los sistemas RMM?",
+            "options": [
+                "Transportan mercancías.",
+                "Crean sensores.",
+                "Fabrican robots.",
+                "Monitorean y gestionan remotamente dispositivos."
+            ],
+            "correct_options": [3],
+            "questionType": "multipleChoice."
+        },
+        {
+            "question": "¿Qué diferencia clave se menciona entre humanos y máquinas?",
+            "options": [
+                "Las máquinas son menos precisas.",
+                "Los humanos usan más sensores.",
+                "Los humanos procesan más datos.",
+                "Las máquinas no se cansan."
+            ],
+            "correct_options": [3],
+            "questionType": "multipleChoice."
+        },
+        {
+            "question": "¿Qué permite combinar IoT con inteligencia artificial?",
+            "options": [
+                "Reducir conectividad.",
+                "Menor uso de datos.",
+                "Desconectar sensores.",
+                "Automatización total."
+            ],
+            "correct_options": [3], 
+            "questionType": "multipleChoice."
+        },
+        {
+            "question": "¿Qué beneficios principales ofrece el IoT?",
+            "options": [
+                "Reducción de conectividad.",
+                "Aumento de impuestos.",
+                "Menor digitalización.",
+                "Eficiencia y ahorro de costos."
+            ],
+            "correct_options": [3],
+            "questionType": "multipleChoice."
+        },
+        {
+            "question": "¿Cuál es un uso del IoT en la agricultura?",
+            "options": [
+                "Monitoreo de redes sociales.",
+                "Transporte aéreo.",
+                "Riego inteligente.",
+                "Educación virtual."
+            ],
+            "correct_options": [2],
+            "questionType": "multipleChoice."
+        },
+        {
+            "question": "¿Cómo ayuda el IoT en la industria del petróleo y gas?",
+            "options": [
+                "Desconecta sensores.",
+                "Aumenta el uso de papel.",
+                "Evita la automatización.",
+                "Reduce riesgos humanos."
+            ],
+            "correct_options": [3],
+            "questionType": "multipleChoice."
+        },
+        {
+            "question": "¿Por qué los sensores son llamados 'la huella dactilar del presente'?",
+            "options": [
+                "Funcionan sin red.",
+                "Capturan datos del entorno.",
+                "No requieren energía.",
+                "Son invisibles."
+            ],
+            "correct_options": [1],
+            "questionType": "multipleChoice."
+        },
+        {
+            "question": "¿Qué significa interoperabilidad en ciudades inteligentes?",
+            "options": [
+                "Uso de papel.",
+                "Comunicación entre sistemas.",
+                "Reducción de sensores.",
+                "Desconexión entre redes."
+            ],
+            "correct_options": [1],
+            "questionType": "multipleChoice."
+        },
+        {
+            "question": "¿Qué característica tienen los vehículos conectados?",
+            "options": [
+                "Mantenimiento predictivo.",
+                "Mayor consumo.",
+                "Desconexión total.",
+                "Uso exclusivo de gasolina."
+            ],
+            "correct_options": [0],
+            "questionType": "multipleChoice."
+        },
+        {
+            "question": "¿Qué permite la fabricación inteligente?",
+            "options": [
+                "Mayor trabajo manual.",
+                "Desconexión de procesos.",
+                "Reducción de calidad.",
+                "Automatización y personalización."
+            ],
+            "correct_options": [3],
+            "questionType": "multipleChoice."
+        },
+        {
+            "question": "¿Qué desafío enfrenta el IoT?",
+            "options": [
+                "Privacidad y seguridad.",
+                "Desconexión social.",
+                "Exceso de papel.",
+                "Falta de sensores."
+            ],
+            "correct_options": [0],
+            "questionType": "multipleChoice."
+        },
+        {
+            "question": "¿Qué mide un wearable como el Apple Watch?",
+            "options": [
+                "Notas académicas.",
+                "Precios del mercado.",
+                "Ritmo cardíaco.",
+                "Temperatura de electrodomésticos."
+            ],
+            "correct_options": [2],
+            "questionType": "multipleChoice."
+        },
+        {
+            "question": "¿Qué hacen las tecnologías RFID y GPS?",
+            "options": [
+                "Cargan baterías.",
+                "Crean sensores nuevos.",
+                "Generan electricidad.",
+                "Localizan objetos físicos."
+            ],
+            "correct_options": [3],
+            "questionType": "multipleChoice."
+        },
+        {
+            "question": "¿Qué sectores industriales tienen más oportunidades con IoT?",
+            "options": [
+                "Turismo.",
+                "Moda.",
+                "Industria.",
+                "Educación."
+            ],
+            "correct_options": [2],
+            "questionType": "multipleChoice."
+        },
+        {
+            "question": "¿Cómo ayuda el IoT a la venta minorista?",
+            "options": [
+                "Reduce análisis de datos.",
+                "Aumenta el desorden.",
+                "Elimina sensores.",
+                "Optimiza inventarios."
+            ],
+            "correct_options": [3],
+            "questionType": "multipleChoice."
+        },
+        {
+            "question": "¿Qué permite el IIoT en fábricas?",
+            "options": [
+                "Gestión de mantenimiento.",
+                "Reducción de internet.",
+                "Desconexión total.",
+                "Aumento de papel."
+            ],
+            "correct_options": [0],
+            "questionType": "multipleChoice."
+        },
+        {
+            "question": "¿Cómo se aprovechan los datos del lugar donde está una persona?",
+            "options": [
+                "Para almacenar energía.",
+                "Para desactivar sensores.",
+                "Para reducir conectividad.",
+                "Para mejorar promociones."
+            ],
+            "correct_options": [3],
+            "questionType": "multipleChoice."
+        },
+        {
+            "question": "¿Qué incluye una de las funcionalidades básicas del IoT?",
+            "options": [
+                "Desconexión eléctrica.",
+                "Acceso remoto.",
+                "Reducción de sensores.",
+                "Impresión 3D."
+            ],
+            "correct_options": [1],
+            "questionType": "multipleChoice."
+        },
+        {
+            "question": "¿Qué gestionan los edificios inteligentes?",
+            "options": [
+                "Iluminación y climatización.",
+                "Redes sociales.",
+                "Reciclaje de papel.",
+                "Producción industrial."
+            ],
+            "correct_options": [0],
+            "questionType": "multipleChoice."
+        },
+        {
+            "question": "¿Cómo ayuda el IoT a las aerolíneas?",
+            "options": [
+                "Reducción de pasajeros.",
+                "Ahorro de millones de dólares.",
+                "Aumento de mantenimiento.",
+                "Pérdida de eficiencia."
+            ],
+            "correct_options": [1],
+            "questionType": "multipleChoice."
+        },
+        {
+            "question": "¿Qué mejora la vida asistida mediante IoT?",
+            "options": [
+                "Consumo eléctrico.",
+                "Uso de papel.",
+                "Calidad de vida.",
+                "Desconexión digital."
+            ],
+            "correct_options": [2],
+            "questionType": "multipleChoice."
+        },
+        {
+            "question": "¿Qué permite un robot conectado al IoT?",
+            "options": [
+                "Ser programado manualmente.",
+                "Gastar más energía.",
+                "Actuar de forma autónoma.",
+                "Ignorar datos."
+            ],
+            "correct_options": [2],
+            "questionType": "multipleChoice."
+        },
+        {
+            "question": "¿Qué permite un gemelo digital?",
+            "options": [
+                "Reducir conectividad.",
+                "Aumentar el consumo energético.",
+                "Eliminar sensores.",
+                "Simular el objeto real."
+            ],
+            "correct_options": [3],
+            "questionType": "multipleChoice."
+        },
+        {
+            "question": "¿Qué permite la energía inteligente?",
+            "options": [
+                "Desconexión de redes.",
+                "Aumento de apagones.",
+                "Incremento de emisiones.",
+                "Optimización del consumo."
+            ],
+            "correct_options": [3],
+            "questionType": "multipleChoice."
+        },
+        {
+            "question": "¿Qué caracteriza a la Cuarta Revolución Industrial?",
+            "options": [
+                "Uso de vapor.",
+                "Desarrollo agrícola.",
+                "Reducción de producción.",
+                "Automatización conectada."
+            ],
+            "correct_options": [3],
+            "questionType": "multipleChoice."
+        },
+        {
+            "question": "¿Qué es un modelo de negocio emergente del IoT?",
+            "options": [
+                "Pago por uso.",
+                "Turismo cultural.",
+                "Educación presencial.",
+                "Compra en papel."
+            ],
+            "correct_options": [0],
+            "questionType": "multipleChoice."
+        }
+    ]
+}
