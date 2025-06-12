@@ -1,0 +1,284 @@
+{
+    "questions": [
+        {
+            "question": "¿Cuál de estas NO es una limitación típica de los dispositivos IoT tradicionales?",
+            "options": [
+                "Memoria en kilobytes.",
+                "Alta capacidad de procesamiento paralelo.",
+                "Baterías de muy baja tensión.",
+                "Actualizaciones difíciles en entornos remotos."
+            ],
+            "correct_options": [
+                1
+            ],
+            "questionType": "multipleChoice"
+        },
+        {
+            "question": "En computación cuántica, un Qubit se caracteriza por su capacidad de…",
+            "options": [
+                "Almacenar exactamente 1 bit de información.",
+                "Estar en superposición de 0 y 1 simultáneamente.",
+                "Existir solo en el estado 0 hasta que se mide.",
+                "Copiarse perfectamente sin colapso de estado."
+            ],
+            "correct_options": [
+                1
+            ],
+            "questionType": "multipleChoice"
+        },
+        {
+            "question": "El algoritmo de Shor es especialmente relevante porque…",
+            "options": [
+                "Acelera búsquedas en bases no estructuradas.",
+                "Factoriza números grandes en tiempo polinomial.",
+                "Simula sistemas cuánticos clásicos.",
+                "Mejora la compresión de datos IoT."
+            ],
+            "correct_options": [
+                1
+            ],
+            "questionType": "multipleChoice"
+        },
+        {
+            "question": "En el contexto de IoT Cuántico, “procesamiento masivo y en tiempo real” se refiere a…",
+            "options": [
+                "Usar Spark en la nube para lotes nocturnos.",
+                "Enviar datos a la nube y esperar micro-batches.",
+                "Analizar simultáneamente miles de flujos con Qubits.",
+                "Almacenar datos en bases relacionales."
+            ],
+            "correct_options": [
+                2
+            ],
+            "questionType": "multipleChoice"
+        },
+        {
+            "question": "Una de las grandes amenazas para la criptografía clásica en IoT es…",
+            "options": [
+                "La falta de memoria en los sensores.",
+                "El algoritmo de Shor ejecutándose en un ordenador cuántico a escala.",
+                "El alto coste de la electricidad.",
+                "La obsolescencia de los sensores."
+            ],
+            "correct_options": [
+                1
+            ],
+            "questionType": "multipleChoice"
+        },
+        {
+            "question": "La “agilidad criptográfica” en IoT implica principalmente…",
+            "options": [
+                "Diseñar nuevos microcontroladores.",
+                "Automatizar la rotación de claves y algoritmos sin downtime.",
+                "Aumentar la velocidad de los enlaces MQTT.",
+                "Eliminar por completo la criptografía."
+            ],
+            "correct_options": [
+                1
+            ],
+            "questionType": "multipleChoice"
+        },
+        {
+            "question": "En un esquema híbrido on-chain/off-chain en IoT blockchain, los datos sensibles…",
+            "options": [
+                "Se almacenan íntegramente on-chain.",
+                "Se eliminan tras la firma digital.",
+                "Residen off-chain con sólo su hash en la cadena.",
+                "Se cifran usando AES-128 on-chain."
+            ],
+            "correct_options": [
+                2
+            ],
+            "questionType": "multipleChoice"
+        },
+        {
+            "question": "Grover ofrece una mejora en búsquedas de O(N) a…",
+            "options": [
+                "O(log N).",
+                "O(N²).",
+                "O(√N).",
+                "O(1)."
+            ],
+            "correct_options": [
+                2
+            ],
+            "questionType": "multipleChoice"
+        },
+        {
+            "question": "¿Cuál es la relación descrita entre la Inteligencia Artificial (IA) y el Internet de las Cosas (IoT)?",
+            "options": [
+                "La IA es una tecnología habilitadora del IoT, pero el IoT no aporta valor a la IA.",
+                "El IoT es una fuente de datos para la IA, no recibe mucho a cambio.",
+                "Es una relación simbiótica donde el IoT alimenta a la IA con datos y la IA devuelve inteligencia y autonomía al IoT.",
+                "Son tecnologías completamente independientes que no tienen una relación directa."
+            ],
+            "correct_options": [2],
+            "questionType": "multipleChoice"
+        },
+        {
+            "question": "¿Cuál de los siguientes NO es un problema común al implementar modelos de IA (NN/DNN) en dispositivos IoT?",
+            "options": [
+                "Poca memoria y almacenamiento en los dispositivos.",
+                "Limitaciones de ancho de banda para enviar o recibir grandes modelos.",
+                "Consumo computacional y energético elevado debido a operaciones de coma flotante.",
+                "Falta de datos generados por los dispositivos IoT."
+            ],
+            "correct_options": [3],
+            "questionType": "multipleChoice"
+        },
+        {
+            "question": "Las operaciones con números enteros (int8) son computacionalmente más eficientes y requieren menos energía que las de coma flotante (float32). ¿Qué técnica aprovecha esta diferencia para optimizar modelos de IA en IoT?",
+            "options": [
+                "Aprendizaje Federado.",
+                "Edge Computing.",
+                "Cuantización.",
+                "Knowledge Distillation."
+            ],
+            "correct_options": [2],
+            "questionType": "multipleChoice"
+        },
+        {
+            "question": "En el contexto del Aprendizaje Federado, ¿qué se comparte entre los dispositivos (nodos) para entrenar el modelo global?",
+            "options": [
+                "Los datos crudos de cada dispositivo.",
+                "Solo una pequeña muestra de los datos de cada dispositivo.",
+                "Los gradientes calculados localmente a partir de los datos.",
+                "El modelo local completo en cada iteración."
+            ],
+            "correct_options": [2],
+            "questionType": "multipleChoice"
+        },
+        {
+            "question": "¿Cuál es el principio fundamental detrás del Aprendizaje Federado para minimizar la comunicación?",
+            "options": [
+                "Enviar todos los datos al servidor central de forma comprimida.",
+                "Llevar el modelo al dispositivo, no los datos al servidor.",
+                "Reducir el número de dispositivos que participan en el entrenamiento.",
+                "Utilizar modelos clásicos de ML que son más pequeños."
+            ],
+            "correct_options": [1],
+            "questionType": "multipleChoice"
+        },
+        {
+            "question": "Una ventaja clave del Aprendizaje Federado es su capacidad para manejar la heterogeneidad de los dispositivos y datos. ¿Cómo lo hace?",
+            "options": [
+                "Requiere que todos los dispositivos tengan la misma cantidad y tipo de datos.",
+                "Ajusta la contribución de cada nodo al modelo global según la cantidad de datos que tiene.",
+                "Normaliza los datos de cada dispositivo antes de usarlos.",
+                "Ignora los datos de los dispositivos con menos información."
+            ],
+            "correct_options": [1],
+            "questionType": "multipleChoice"
+        },
+        {
+            "question": "Un fabricante de wearables médicos (sensores de ritmo cardíaco) desea integrar IA para detectar patrones anómalos directamente en el dispositivo. La principal limitación es la privacidad de los datos del paciente y el ancho de banda limitado de la conexión del wearable. ¿Qué tecnología aborda mejor estos problemas al entrenar el modelo de IA?",
+            "options": [
+                "Cuantización.",
+                "Aprendizaje Federado.",
+                "Pruning.",
+                "Knowledge Distillation."
+            ],
+            "correct_options": [0],
+            "questionType": "multipleChoice"
+        },
+        {
+            "question": "Un dron agrícola necesita identificar plagas en cultivos en tiempo real utilizando visión por computadora, pero enviar el video completo a la nube para procesamiento es lento y costoso en términos de ancho de banda. ¿Qué técnica, aplicada al modelo de IA a bordo del dron, es más adecuada para permitir el procesamiento local rápido y eficiente si se quiere mantener un bajo coste de los drones?",
+            "options": [
+                "Aprendizaje Federado.",
+                "Cuantización.",
+                "Entrenamiento Supervisado.",
+                "Uso de dispositivos embebidos con GPU como Nvidia Jetson."
+            ],
+            "correct_options": [1],
+            "questionType": "multipleChoice"
+        },
+        {
+            "question": "La cuantización permite que los modelos de IA se ejecuten en dispositivos con recursos limitados al …",
+            "options": [
+                "Eliminar la necesidad de almacenar los parámetros del modelo.",
+                "Reducir el número de capas en la red neuronal.",
+                "Disminuir la cantidad de bits necesarios para representar los parámetros.",
+                "Requerir menos operaciones de multiplicación y suma."
+            ],
+            "correct_options": [2],
+            "questionType": "multipleChoice"
+        },
+        {
+            "question": "¿Qué porcentaje de pérdida de precisión se considera generalmente aceptable en un proceso de cuantización?",
+            "options": [
+                "Menor o igual al 5%.",
+                "Exactamente el 10%.",
+                "Menos 1%.",
+                "Más del 15%."
+            ],
+            "correct_options": [2],
+            "questionType": "multipleChoice"
+        },
+        {
+            "question": "Un ingeniero debe implementar un modelo de IA para reconocimiento de voz en un microcontrolador de muy bajo coste con memoria y procesamiento extremadamente limitados. ¿Que clase modelo sería adecuado utilizar?",
+            "options": [
+                "DNN.",
+                "CNN.",
+                "BitNet.",
+                "SVM."
+            ],
+            "correct_options": [2],
+            "questionType": "multipleChoice"
+        },
+        {
+            "question": "¿Qué técnica reduce el número de parámetros y mejora la eficiencia de una NN?",
+            "options": [
+                "Quantization Aware Training (QAT).",
+                "Pruning (Poda).",
+                "Knowledge Distillation.",
+                "Todas son incorrectas."
+            ],
+            "correct_options": [1],
+            "questionType": "multipleChoice"
+        },
+        {
+            "question": "Un sistema de sensores ambientales distribuidos en una ciudad genera un enorme volumen de datos. Entrenar un modelo global que aprenda de todos estos datos sin tener que centralizar la información de cada sensor, respetando la privacidad de las ubicaciones precisas, sería un desafío. ¿Qué tecnología permite entrenar este modelo globalmente sin que los datos individuales de los sensores salgan de su ubicación?",
+            "options": [
+                "Cuantización.",
+                "Knowledge Distillation.",
+                "Aprendizaje Federado.",
+                "Todas son incorrectas."
+            ],
+            "correct_options": [2],
+            "questionType": "multipleChoice"
+        },
+        {
+            "question": "¿Qué problema de la cuantización, relacionado con la necesidad de tener versiones del modelo para diferentes dispositivos, busca resolver la técnica MatQuant?",
+            "options": [
+                "La pérdida de precisión al cuantizar de forma agresiva.",
+                "El soporte heterogéneo de tipos de datos en el hardware.",
+                "La necesidad de mantener y cuantizar múltiples modelos para distintos niveles de precisión/rendimiento.",
+                "La dificultad de entrenar modelos cuantizados."
+            ],
+            "correct_options": [2],
+            "questionType": "multipleChoice"
+        },
+        {
+            "question": "En el algoritmo de Aprendizaje Federado, los gradientes se calculan…",
+            "options": [
+                "En el modelo global.",
+                "En los modelos locales.",
+                "En el modelo global, una vez se le han enviado todos los modelos locales.",
+                "En el modelo global y en los locales."
+            ],
+            "correct_options": [3],
+            "questionType": "multipleChoice"
+        },
+        {
+            "question": "¿Cuál de los siguientes es un problema que puede surgir al aplicar cuantización de forma agresiva a un modelo de IA?",
+            "options": [
+                "Aumento del tamaño del modelo.",
+                "Incremento del consumo energético.",
+                "Disminución de la precisión del modelo.",
+                "Necesidad de enviar más datos a la nube."
+            ],
+            "correct_options": [2],
+            "questionType": "multipleChoice"
+        }
+    ]
+}
