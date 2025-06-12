@@ -1,0 +1,272 @@
+{
+  "questions": [
+    {
+      "question": "En una arquitectura IoT basada en computación en niebla, ¿cuál de las siguientes afirmaciones describe con mayor precisión una ventaja crítica del tráfico este-oeste frente al tráfico norte-sur, especialmente en aplicaciones sensibles a la latencia como vehículos autónomos o entornos médicos conectados?  ",
+      "options": [
+        "El tráfico este-oeste permite delegar el procesamiento intensivo a la nube, reduciendo así la carga computacional en los nodos de niebla.",
+        "A diferencia del tráfico norte-sur, el tráfico este-oeste permite optimizar el almacenamiento en la nube mediante compresión distribuida.",
+        "El tráfico este-oeste facilita una comunicación lateral entre nodos en el mismo nivel, lo que mejora la latencia, la disponibilidad y la capacidad de respuesta local del sistema.",
+        "El tráfico este-oeste se emplea principalmente para transmitir grandes volúmenes de datos históricos a centros de datos para su análisis posterior.",
+        "La implementación del tráfico este-oeste impide la descentralización del procesamiento, pero mejora la seguridad al depender exclusivamente de nodos centrales."
+      ],
+      "correct_options": [2],
+      "questionType": "multipleChoice"
+    },
+    {
+      "question": "En el diseño de arquitecturas para sistemas IoT, ¿cuál de las siguientes afirmaciones describe correctamente una implicación técnica clave al optar por una topología plana frente a una jerárquica?  ",
+      "options": [
+        "En una topología jerárquica, los nodos en el borde tienen mayor capacidad de cómputo que los de niveles superiores, lo cual reduce la latencia y mejora el rendimiento global.",
+        "Una topología plana permite una mayor descentralización del procesamiento, pero puede enfrentar desafíos en coordinación y eficiencia a medida que el sistema escala.",
+        "La arquitectura plana garantiza una asignación óptima de recursos, ya que los nodos siempre ejecutan tareas proporcionales a su capacidad computacional.",
+        "En la topología jerárquica, todos los nodos pueden actuar como punto de entrada para sensores y actuadores, lo cual simplifica el enrutamiento de datos."
+      ],
+      "correct_options": [1],
+      "questionType": "multipleChoice"
+    },
+    {
+      "question": "¿Por qué el uso exclusivo de la nube puede ser ineficiente en aplicaciones IoT que requieren respuestas en tiempo real?",
+      "options": [
+        "Porque la nube no soporta dispositivos IoT",
+        "Debido a la latencia en la comunicación con centros de datos remoto",
+        "Porque los datos se pierden en la transmisión",
+        "Porque la nube no permite el almacenamiento de datos"
+      ],
+      "correct_options": [1],
+      "questionType": "multipleChoice"
+    },
+    {
+      "question": "En el contexto de la Arquitectura de Referencia OpenFog, ¿cuál de las siguientes afirmaciones representa de forma más precisa la relación funcional entre la capa de abstracción de protocolos, la infraestructura y la abstracción de hardware?  ",
+      "options": [
+        "La capa de infraestructura se encarga de estandarizar el acceso a sensores heterogéneos mediante APIs comunes, mientras que la abstracción de hardware proporciona un modelo físico de enfriamiento y mantenimiento de nodos.",
+        "La abstracción de protocolos permite integrar sensores analógicos y digitales bajo una interfaz unificada, mientras que la capa de abstracción de hardware virtualiza los recursos físicos para facilitar migración y balanceo de carga.",
+        "La abstracción de hardware define el tamaño, peso y consumo energético de los nodos de niebla, mientras que la infraestructura actúa como middleware entre sensores y la nube.",
+        "La capa de abstracción de protocolos define las reglas físicas de instalación de sensores, y la infraestructura virtualiza la red para soportar comunicaciones de alta latencia.",
+        "Las capas de abstracción de protocolos e infraestructura son exclusivas del nodo perimetral (edge), mientras que la abstracción de hardware solo aplica en entornos de nube centralizada."
+      ],
+      "correct_options": [1],
+      "questionType": "multipleChoice"
+    },
+    {
+      "question": "En la arquitectura de referencia OpenFog, ¿cuál de las siguientes afirmaciones describe correctamente la relación entre las capas de soporte de aplicaciones y servicios de aplicaciones, considerando las prácticas modernas de desarrollo y despliegue?  ",
+      "options": [
+        "La capa de servicios de aplicaciones proporciona herramientas de desarrollo como lenguajes de programación, sistemas de control de versiones y servidores web, mientras que la capa de soporte de aplicaciones encapsula los microservicios para su despliegue.",
+        "El soporte de aplicaciones gestiona la lógica de negocio y las interfaces de usuario, mientras que los servicios de aplicaciones implementan entornos de ejecución como VMs o contenedores para soportarlas.",
+        "El soporte de aplicaciones incluye la infraestructura tecnológica para ejecutar y gestionar aplicaciones (como contenedores y motores de ejecución), mientras que la capa de servicios de aplicaciones se enfoca en ofrecer funcionalidades operativas o de negocio encapsuladas como microservicios.",
+        "Ambas capas gestionan los dispositivos físicos y la comunicación con sensores mediante APIs, por lo que se implementan exclusivamente en el nodo de borde con mayor capacidad.",
+        "Los microservicios solo residen en la capa de soporte de aplicaciones, ya que los servicios de aplicaciones deben ejecutarse como procesos monolíticos por cuestiones de rendimiento."
+      ],
+      "correct_options": [2],
+      "questionType": "multipleChoice"
+    },
+    {
+      "question": "¿Qué tipo de servicio en la nube (cloud service) sería más adecuado para una startup de IoT que necesita infraestructura escalable sin gestionar servidores físicos?",
+      "options": [
+        "SaaS (Software as a Service).",
+        "NaaS (Network as a Service).",
+        "IaaS (Infrastructure as a Service).",
+        "PaaS (Platform as a Service)."
+      ],
+      "correct_options": [2],
+      "questionType": "multipleChoice"
+    },
+    {
+      "question": "¿Por qué los semáforos inteligentes necesitan operar sin conexión a la nube?",
+      "options": [
+        "Para reducir costos de implementación.",
+        "Porque la ley lo exige.",
+        "Para mantener funcionalidad durante fallas de red.",
+        "Porque no generan datos importantes."
+      ],
+      "correct_options": [2],
+      "questionType": "multipleChoice"
+    },
+    {
+      "question": "¿Qué característica de la nube es menos relevante para IoT?",
+      "options": [
+        "Elasticidad.",
+        "Pago por uso.",
+        "Monitoreo de rendimiento.",
+        "Interfaz gráfica avanzada."
+      ],
+      "correct_options": [3],
+      "questionType": "multipleChoice"
+    },
+    {
+      "question": "¿Qué ventaja clave ofrece el modelo de pago por uso (pay-as-you-go) en la nube para aplicaciones de IoT?",
+      "options": [
+        "Permite a las startups escalar recursos sin grandes inversiones iniciales, pagando solo por lo que consumen.",
+        "Las empresas pagan una tarifa fija mensual independientemente del uso.",
+        "Garantiza una latencia inferior a 1 milisegundo en todos los casos.",
+        "Elimina la necesidad de edge computing."
+      ],
+      "correct_options": [0],
+      "questionType": "multipleChoice"
+    },
+    {
+      "question": "¿Cuál es la principal diferencia entre Fog Computing y Edge Computing en términos de ubicación del procesamiento?",
+      "options": [
+        "Fog Computing procesa exclusivamente en la nube, Edge Computing en dispositivos locales.",
+        "Ambos procesan únicamente en centros de datos remotos.",
+        "Fog Computing usa nodos intermedios (gateways/servidores LAN), Edge Computing procesa directamente en el dispositivo/sensor.",
+        "Edge Computing siempre requiere conexión a la nube, Fog Computing no."
+      ],
+      "correct_options": [2],
+      "questionType": "multipleChoice"
+    },
+    {
+      "question": "En el contexto del Continuum Nube-Niebla-Borde, ¿qué capa se caracteriza por tener un control semi-descentralizado y capacidad para filtrar datos antes de enviarlos a la nube?",
+      "options": [
+        "Cloud Computing.",
+        "Fog Computing.",
+        "Edge Computing.",
+        "Ninguna, todas las capas son completamente centralizadas."
+      ],
+      "correct_options": [1],
+      "questionType": "multipleChoice"
+    },
+    {
+      "question": "Según los ejemplos cuantitativos de latencia proporcionados, ¿qué afirmación es verdadera?",
+      "options": [
+        "Un gateway industrial típicamente tiene mayor latencia que un servidor en AWS.",
+        "Los protocolos cableados como Ethernet pueden ofrecer latencia determinista en el rango de microsegundos a milisegundos.",
+        "BLE siempre tiene menor latencia que WiFi.",
+        "La nube tiene latencia determinista inferior a 10 ms."
+      ],
+      "correct_options": [1],
+      "questionType": "multipleChoice"
+    },
+    {
+      "question": "¿Qué ventaja clave ofrece Fog Computing sobre Edge Computing para dispositivos IoT?",
+      "options": [
+        "Procesamiento directamente en el sensor sin necesidad de hardware adicional.",
+        "Ofrecer recursos ilimitados de computación como la nube.",
+        "Eliminar completamente la necesidad de conexión a la nube.",
+        "Capacidad de integrar dispositivos sin capacidad de cómputo mediante preprocesamiento."
+      ],
+      "correct_options": [3],
+      "questionType": "multipleChoice"
+    },
+    {
+      "question": "¿Qué característica de escalabilidad es correcta según el Continuum?",
+      "options": [
+        "La nube es altamente escalable, mientras Fog/Edge tienen limitaciones por recursos físicos locales.",
+        "La escalabilidad disminuye progresivamente desde Edge hacia la nube.",
+        "Solo el Edge Computing puede escalar mediante jerarquías de nodos.",
+        "Tanto Fog como Edge tienen escalabilidad ilimitada similar a la nube."
+      ],
+      "correct_options": [0],
+      "questionType": "multipleChoice"
+    },
+    {
+      "question": "¿Cuál de las siguientes afirmaciones representa con mayor precisión una ventaja estratégica derivada de la combinación de modularidad e inteligencia en los nodos, tal como la propone la Arquitectura de Referencia OpenFog?",
+      "options": [
+        "La modularidad permite que todos los nodos ejecuten exactamente la misma lógica y software, eliminando la necesidad de coordinación entre ellos.",
+        "La inteligencia en los nodos reduce la necesidad de interoperabilidad entre fabricantes, ya que todos los algoritmos se ejecutan centralmente.",
+        "La modularidad garantiza que los nodos puedan operar como entidades pasivas, enfocándose únicamente en el reenvío eficiente de datos hacia la nube.",
+        "La arquitectura modular, combinada con nodos inteligentes, permite construir sistemas resilientes y adaptables, donde cada nodo puede ser actualizado de forma independiente y colaborar activamente en la toma de decisiones locales."
+      ],
+      "correct_options": [3],
+      "questionType": "multipleChoice"
+    },
+    {
+      "question": "¿Cuál de los siguientes componentes de OpenStack resulta clave para la movilidad y gestión eficiente de instancias virtuales en entornos distribuidos de fog computing, y por qué?",
+      "options": [
+        "Nova, porque se encarga de crear instancias de cómputo en la nube y distribuir imágenes virtuales entre nodos según latencia.",
+        "Cinder, porque permite almacenar dinámicamente configuraciones de red en cada nodo, garantizando sincronización en tiempo real.",
+        "Glance, porque permite gestionar, mover y replicar imágenes de máquinas virtuales entre nodos distribuidos sin detener su ejecución",
+        "Neutron, porque implementa redes virtuales en la periferia (edge), garantizando el enrutamiento local sin necesidad de red troncal."
+      ],
+      "correct_options": [2],
+      "questionType": "multipleChoice"
+    },
+    {
+      "question": "En una arquitectura de fog computing basada en OpenStack, ¿qué componente desempeña un rol esencial en la autenticación y autorización de usuarios y servicios distribuidos, asegurando la integridad de los entornos en diferentes nodos de borde?",
+      "options": [
+        "Keystone, porque gestiona identidades, otorga tokens de acceso y garantiza entornos seguros y aislados.",
+        "Heat, porque permite orquestar redes seguras y asignar permisos entre servicios desplegados.",
+        "Ceilometer, porque actúa como firewall distribuido midiendo y controlando el acceso a los recursos de red.",
+        "Horizon, porque permite controlar el acceso de usuarios mediante su interfaz gráfica web.",
+        "Glance, porque almacena credenciales cifradas junto con las imágenes virtuales para su verificación posterior."
+      ],
+      "correct_options": [0],
+      "questionType": "multipleChoice"
+    },
+    {
+      "question": "En el contexto de fog computing con OpenStack, ¿cuál de las siguientes afirmaciones representa una ventaja clave y diferenciadora del uso combinado de los servicios Nova, Heat y Cinder en la gestión distribuida de nodos?",
+      "options": [
+        "Permite desplegar imágenes virtuales en caliente sin pasar por servicios de almacenamiento persistente, reduciendo significativamente el consumo energético.",
+        "Facilita la orquestación automatizada del ciclo de vida de máquinas virtuales mediante plantillas reutilizables y escalado dinámico según la carga.",
+        "Sustituye el uso de telemetría para escalar servicios, ya que todos los componentes se actualizan manualmente mediante scripts definidos en Glance.",
+        "Elimina la necesidad de definir dominios de fallo, ya que los servicios se redistribuyen automáticamente entre centros de datos remotos."
+      ],
+      "correct_options": [1],
+      "questionType": "multipleChoice"
+    },
+    {
+      "question": "¿Qué funcionalidad proporciona AWS IoT Greengrass Core?",
+      "options": [
+        "Monitoreo remoto de dispositivos IoT desde la consola de AWS.",
+        "Control de acceso granular a dispositivos IoT.",
+        "Ejecutar funciones Lambda localmente en dispositivos periféricos sin conexión a la nube.",
+        "Almacenamiento de grandes volúmenes de datos IoT en tiempo real."
+      ],
+      "correct_options": [2],
+      "questionType": "multipleChoice"
+    },
+    {
+      "question": "¿Por qué la nube no es adecuada para aplicaciones de tiempo real duro (<10ms)?",
+      "options": [
+        "Porque los dispositivos no soportan conexiones cifradas.",
+        "Por la latencia y el jitter introducidos por la red.",
+        "Debido a la alta carga computacional de la nube.",
+        "Porque los protocolos en la nube no son compatibles con sensores."
+      ],
+      "correct_options": [1],
+      "questionType": "multipleChoice"
+    },
+    {
+      "question": "¿Cuál es una estrategia habitual para cumplir normativas como el RGPD en arquitecturas fog?",
+      "options": [
+        "Filtrar y anonimizar los datos sensibles en el borde.",
+        "Comprimir los datos antes de transmitir.",
+        "Enviar todos los datos cifrados a la nube.",
+        "Utilizar bases de datos relacionales locales."
+      ],
+      "correct_options": [0],
+      "questionType": "multipleChoice"
+    },
+    {
+      "question": "¿Cuál es una ventaja de una arquitectura fog multi-tier respecto a una single-tier?",
+      "options": [
+        "Requiere menos recursos en cada nodo fog.",
+        "Escala mejor en despliegues grandes como ciudades o fábricas.",
+        "Permite mayor descentralización del hardware.",
+        "Es más sencilla de implementar."
+      ],
+      "correct_options": [1],
+      "questionType": "multipleChoice"
+    },
+    {
+      "question": "¿Cuál de los siguientes tipos de respaldo ofrece el menor tiempo de recuperación ante fallos?",
+      "options": [
+        "Warm standby.",
+        "Cold stanby.",
+        "Hot standby.",
+        "Lazy fallback."
+      ],
+      "correct_options": [2],
+      "questionType": "multipleChoice"
+    },
+    {
+      "question": "¿Cuál es una ventaja de la coordinación descentralizada entre nodos fog?",
+      "options": [
+        "Reduce el consumo energético.",
+        "Permite usar protocolos propietarios.",
+        "Facilita la conexión directa con la nube.",
+        "Evita puntos únicos de fallo."
+      ],
+      "correct_options": [3],
+      "questionType": "multipleChoice"
+    }
+  ]
+}
