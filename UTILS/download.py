@@ -20,6 +20,15 @@ def checkUpdates(folderPath: str, owner: str, repo: str) -> bool:
     if not os.path.exists(folderPath):
         return False
 
+    # If the folder exists but has no question files yet, force a download
+    hasQuestions = False
+    for root, _, files in os.walk(folderPath):
+        if any(name.endswith(".json") for name in files):
+            hasQuestions = True
+            break
+    if not hasQuestions:
+        return False
+
     folderTime = datetime.datetime.fromtimestamp(
         os.path.getmtime(folderPath), tz=datetime.timezone.utc
     )
