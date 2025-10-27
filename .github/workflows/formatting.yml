@@ -1,70 +1,123 @@
 name: Formatting code with Black and Prettier
 
 on:
-  push:
   pull_request:
+    types: [opened, synchronize, reopened]
+  push:
+    branches: [ main, master ]
   workflow_dispatch:
 
+# Permisos mínimos: comentar en PRs y poder escribir en contenido cuando toque.
 permissions:
   contents: write
+  pull-requests: write
 
 jobs:
-  build:
+  format:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout (PR o push)
+        uses: actions/checkout@v4
         with:
-          persist-credentials: false
-
-      - name: Set up SSH
-        run: |
-          mkdir -p ~/.ssh
-          echo "${{ secrets.DEPLOY_KEY }}" > ~/.ssh/id_ed25519
-          chmod 600 ~/.ssh/id_ed25519
-          ssh-keyscan github.com >> ~/.ssh/known_hosts
+          # En PRs de mismo repo, GitHub rellena head_ref; en push usamos ref_name.
+          ref: ${{ github.head_ref || github.ref_name }}
+          fetch-depth: 0
+          persist-credentials: true
 
       - name: Set up Python
-        uses: actions/setup-python@v3
+        uses: actions/setup-python@v5
         with:
-          python-version: "3.12" # Latest stable version
+          python-version: "3.12"
 
-      - name: Install Python dependencies
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install formatters
         run: |
           python -m pip install --upgrade pip
           pip install black
+          npm i -g prettier
 
-      - name: Format code with Black
+      # ====== CASO PR DESDE FORK: SOLO CHECK, NADA DE PUSH ======
+      - name: Check formatting (fork PR)
+        if: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.repo.fork }}
+        id: check_fork
         run: |
-          black . || true
+          set +e
+          black --check .
+          PY_STATUS=$?
+          prettier -c "**/*.{js,jsx,ts,tsx,json,json5,jsonc,css,scss,less,html,vue,astro,svelte,md,mdx,yml,yaml,graphql,gql,toml}"
+          JS_STATUS=$?
+          echo "py_status=$PY_STATUS" >> $GITHUB_OUTPUT
+          echo "js_status=$JS_STATUS" >> $GITHUB_OUTPUT
+          set -e
+          # Generar parche de formateo para ayudar al autor
+          git diff --quiet || true
+          black . >/dev/null 2>&1 || true
+          prettier --log-level silent -w "**/*.{js,jsx,ts,tsx,json,json5,jsonc,css,scss,less,html,vue,astro,svelte,md,mdx,yml,yaml,graphql,gql,toml}" || true
+          git diff > formatting.patch || true
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
+      - name: Upload formatting patch (artifact)
+        if: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.repo.fork && (steps.check_fork.outputs.py_status != '0' || steps.check_fork.outputs.js_status != '0') }}
+        uses: actions/upload-artifact@v4
         with:
-          node-version: "16"
+          name: formatting.patch
+          path: formatting.patch
 
-      - name: Install Prettier
-        run: |
-          npm install --global prettier
+      - name: Comment instructions on PR
+        if: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.repo.fork && (steps.check_fork.outputs.py_status != '0' || steps.check_fork.outputs.js_status != '0') }}
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const body = `
+**Formato requerido** 🔧
 
-      - name: Format all files with Prettier
+Esta PR viene de un *fork*, así que el bot no puede hacer \`git push\` automático.
+Aplica el formateo en tu rama y vuelve a pushear:
+
+\`\`\`bash
+pip install black
+npm i -g prettier
+black .
+prettier -w "**/*.{js,jsx,ts,tsx,json,json5,jsonc,css,scss,less,html,vue,astro,svelte,md,mdx,yml,yaml,graphql,gql,toml}"
+git add -A
+git commit -m "style: apply format"
+git push
+\`\`\`
+
+También puedes descargar el artifact **formatting.patch** y aplicarlo con:
+\`\`\`bash
+git apply formatting.patch
+\`\`\`
+`;
+            github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body
+            });
+
+      - name: Fail if formatting needed (fork PR)
+        if: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.repo.fork && (steps.check_fork.outputs.py_status != '0' || steps.check_fork.outputs.js_status != '0') }}
+        run: exit 1
+
+      # ====== CASO MISMO REPO (PR o push): AUTO-FIX + PUSH ======
+      - name: Auto-fix & commit (same-repo PR or push)
+        if: ${{ !(github.event_name == 'pull_request' && github.event.pull_request.head.repo.fork) }}
         run: |
+          black .
           prettier --write "**/*.{js,jsx,ts,tsx,json,json5,jsonc,css,scss,less,html,vue,astro,svelte,md,mdx,yml,yaml,graphql,gql,toml}"
-
-      - name: Commit and push changes
-        run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          if ! git diff --quiet; then
-            git add .
+          if [[ -n "$(git status --porcelain)" ]]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add -A
             git commit -m "chore: Auto-format code with Black and Prettier [GitHub Action]"
-            if ! git push git@github.com:${{ github.repository }}.git; then
-              echo "SSH push failed. Falling back to normal."
-              git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }}.git
-              git push
-            fi
+            # En PRs del mismo repo, empuja a la rama de la PR; en push, a la actual.
+            BRANCH="${GITHUB_HEAD_REF:-${GITHUB_REF_NAME}}"
+            git push origin HEAD:${BRANCH}
           else
             echo "No changes to push."
           fi
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
