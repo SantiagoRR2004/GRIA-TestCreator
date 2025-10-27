@@ -1,0 +1,500 @@
+body {
+  min-height: 100vh;
+  background: radial-gradient(circle at 20% 20%, rgba(255, 0, 200, 0.22), transparent 55%),
+    radial-gradient(circle at 80% 30%, rgba(0, 200, 255, 0.25), transparent 60%),
+    #070018;
+  color: #f5f5ff;
+  font-family: "Verdana", "Trebuchet MS", sans-serif;
+  letter-spacing: 0.04em;
+  overflow-x: hidden;
+  position: relative;
+}
+
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -2;
+  transition: opacity 0.6s ease;
+}
+
+body::before {
+  background: url("./Retro/bg.jpg") center/cover no-repeat fixed;
+  opacity: 0.92;
+  animation: retroBackgroundPulse 12s infinite alternate ease-in-out;
+}
+
+body::after {
+  background: url("./Retro/grid.png") center/contain repeat;
+  opacity: 0.55;
+  mix-blend-mode: screen;
+  animation: retroGridScroll 18s linear infinite;
+}
+
+@keyframes retroBackgroundPulse {
+  0% {
+    filter: hue-rotate(0deg) saturate(110%);
+  }
+  50% {
+    filter: hue-rotate(20deg) saturate(150%);
+  }
+  100% {
+    filter: hue-rotate(-15deg) saturate(130%);
+  }
+}
+
+@keyframes retroGridScroll {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -400px 240px;
+  }
+}
+
+.retro-neon-rings {
+  position: fixed;
+  inset: -20vh -20vw;
+  pointer-events: none;
+  z-index: -1;
+  mix-blend-mode: screen;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(255, 0, 200, 0.35), transparent 55%),
+    radial-gradient(circle at 70% 60%, rgba(0, 200, 255, 0.4), transparent 60%),
+    radial-gradient(circle at 40% 80%, rgba(255, 255, 0, 0.25), transparent 65%);
+  filter: blur(0.8px);
+  animation: retroRings 14s infinite alternate-reverse ease-in-out;
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+@keyframes retroRings {
+  0%,
+  100% {
+    transform: scale(1) rotate(0deg);
+  }
+  50% {
+    transform: scale(1.05) rotate(4deg);
+  }
+}
+
+.container {
+  background: rgba(15, 10, 60, 0.78);
+  border: 3px solid rgba(255, 0, 210, 0.55);
+  box-shadow:
+    0 0 32px rgba(255, 0, 200, 0.55),
+    inset 0 0 40px rgba(0, 255, 255, 0.35);
+  border-radius: 18px;
+  padding: 36px 44px;
+  margin: 48px auto;
+  max-width: 840px;
+  position: relative;
+  overflow: hidden;
+}
+
+.container::before,
+.container::after {
+  content: "";
+  position: absolute;
+  inset: -12px;
+  border: 2px dashed rgba(0, 255, 255, 0.45);
+  border-radius: 24px;
+  animation: retroFramePulse 6s infinite ease-in-out;
+  pointer-events: none;
+}
+
+.container::after {
+  inset: -24px;
+  border: 2px solid rgba(255, 255, 0, 0.25);
+  animation-delay: -3s;
+}
+
+@keyframes retroFramePulse {
+  0%,
+  100% {
+    opacity: 0.35;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.75;
+    transform: scale(1.02);
+  }
+}
+
+.h1,
+h1 {
+  font-size: 40px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #00f6ff;
+  text-shadow:
+    0 0 18px rgba(0, 246, 255, 0.8),
+    0 0 36px rgba(255, 0, 220, 0.6);
+  margin-bottom: 28px;
+  letter-spacing: 0.18em;
+}
+
+.mode-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 28px;
+  text-transform: uppercase;
+  color: #ff8cff;
+  letter-spacing: 0.12em;
+}
+
+.select,
+select,
+input[type="number"],
+.answer-input,
+button,
+input[type="submit"] {
+  background: linear-gradient(135deg, rgba(40, 10, 120, 0.9), rgba(5, 120, 180, 0.9));
+  border: 2px solid rgba(0, 255, 255, 0.6);
+  color: #f9f9ff;
+  padding: 12px 18px;
+  border-radius: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  transition:
+    transform 0.18s ease,
+    box-shadow 0.18s ease,
+    border-color 0.2s ease;
+  box-shadow: 0 0 18px rgba(0, 255, 255, 0.35);
+}
+
+.select:focus,
+select:focus,
+.answer-input:focus,
+button:focus,
+input[type="submit"]:focus {
+  outline: none;
+  border-color: rgba(255, 255, 0, 0.8);
+  box-shadow: 0 0 24px rgba(255, 255, 0, 0.65);
+}
+
+button:hover,
+input[type="submit"]:hover {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow:
+    0 0 24px rgba(255, 255, 0, 0.7),
+    0 0 40px rgba(0, 255, 255, 0.55);
+}
+
+.option-display,
+.buttons {
+  border-top: 2px dashed rgba(255, 0, 255, 0.3);
+  padding-top: 18px;
+  margin-top: 18px;
+}
+
+.option-display:first-child,
+.buttons:first-child {
+  border-top: none;
+  padding-top: 0;
+  margin-top: 0;
+}
+
+label {
+  color: #fffa9e;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-shadow:
+    0 0 12px rgba(255, 255, 0, 0.5),
+    0 0 24px rgba(255, 0, 255, 0.3);
+}
+
+.question {
+  background: rgba(12, 6, 70, 0.8);
+  border: 2px solid rgba(255, 0, 210, 0.45);
+  border-radius: 14px;
+  padding: 18px 20px;
+  margin-bottom: 24px;
+  position: relative;
+  overflow: hidden;
+}
+
+.question::after {
+  content: "";
+  position: absolute;
+  inset: -40px;
+  background: conic-gradient(
+      from 0deg,
+      rgba(0, 255, 255, 0.15),
+      rgba(255, 0, 255, 0.25),
+      rgba(255, 255, 0, 0.12),
+      rgba(0, 255, 255, 0.15)
+    );
+  opacity: 0.4;
+  mix-blend-mode: screen;
+  animation: retroQuestionGlow 8s linear infinite;
+}
+
+@keyframes retroQuestionGlow {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.question p {
+  font-size: 18px;
+  color: #ffffff;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-shadow: 0 0 14px rgba(255, 255, 255, 0.6);
+}
+
+.question li {
+  color: #e0e8ff;
+  letter-spacing: 0.05em;
+  margin: 6px 0;
+  position: relative;
+  padding-left: 8px;
+}
+
+.question li::before {
+  content: "►";
+  position: absolute;
+  left: -14px;
+  color: #00ffff;
+  text-shadow: 0 0 6px rgba(0, 255, 255, 0.7);
+}
+
+.retro-inputs,
+input[type="radio"],
+input[type="checkbox"] {
+  accent-color: #00ffff;
+}
+
+.correct-answer {
+  display: none;
+  margin-top: 12px;
+  padding: 10px 16px;
+  border-radius: 10px;
+  border: 2px solid rgba(0, 255, 255, 0.45);
+  background: rgba(10, 0, 80, 0.75);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #fdf9ff;
+  box-shadow: inset 0 0 18px rgba(0, 255, 255, 0.25);
+}
+
+.correct-answer.correct {
+  display: block;
+  color: #63ffc9;
+  border-color: rgba(0, 255, 170, 0.7);
+  box-shadow:
+    inset 0 0 22px rgba(0, 255, 170, 0.4),
+    0 0 20px rgba(0, 255, 255, 0.35);
+}
+
+.correct-answer.incorrect {
+  display: block;
+  color: #ff4b78;
+  border-color: rgba(255, 0, 120, 0.75);
+  box-shadow:
+    inset 0 0 22px rgba(255, 0, 120, 0.35),
+    0 0 20px rgba(255, 80, 120, 0.4);
+}
+
+.scoreDisplay,
+#scoreDisplay {
+  background: rgba(15, 0, 65, 0.76);
+  border: 2px solid rgba(0, 255, 255, 0.55);
+  border-radius: 14px;
+  padding: 20px;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  text-align: center;
+  box-shadow:
+    inset 0 0 26px rgba(0, 0, 0, 0.6),
+    0 0 32px rgba(255, 0, 255, 0.45);
+}
+
+.retro-badge {
+  position: fixed;
+  top: 40px;
+  right: 30px;
+  width: 150px;
+  height: 150px;
+  background: url("./Retro/badge.png") center/contain no-repeat;
+  pointer-events: none;
+  opacity: 0;
+  transform: scale(0.9) rotate(-4deg);
+  filter: drop-shadow(0 0 24px rgba(255, 0, 255, 0.6));
+  transition:
+    opacity 0.5s ease,
+    transform 0.7s ease;
+  z-index: 11;
+}
+
+.retro-badge {
+  opacity: 1;
+  transform: scale(1) rotate(0deg);
+}
+
+.retro-overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 10000;
+  font-family: "Verdana", "Trebuchet MS", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  transition: opacity 0.4s ease;
+}
+
+.retro-overlay::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.65));
+  backdrop-filter: blur(4px);
+}
+
+.retro-overlay.is-visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.retro-overlay.is-fading {
+  opacity: 0;
+}
+
+.retro-overlay__panel {
+  position: relative;
+  padding: 48px 64px;
+  background: linear-gradient(135deg, rgba(40, 0, 120, 0.95), rgba(0, 180, 220, 0.9));
+  border-radius: 24px;
+  border: 3px solid rgba(255, 255, 0, 0.8);
+  box-shadow:
+    0 0 40px rgba(255, 0, 255, 0.7),
+    0 0 90px rgba(0, 255, 255, 0.65);
+  text-align: center;
+  overflow: hidden;
+  max-width: 80vw;
+}
+
+.retro-overlay__panel::before,
+.retro-overlay__panel::after {
+  content: "";
+  position: absolute;
+  inset: -40%;
+  background: conic-gradient(
+      from 90deg,
+      rgba(255, 0, 255, 0.25),
+      rgba(0, 255, 255, 0.3),
+      rgba(255, 255, 0, 0.15),
+      rgba(255, 0, 255, 0.25)
+    );
+  mix-blend-mode: screen;
+  animation: retroOverlaySpin 12s linear infinite;
+  opacity: 0.35;
+}
+
+.retro-overlay__panel::after {
+  animation-direction: reverse;
+  opacity: 0.25;
+}
+
+@keyframes retroOverlaySpin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.retro-overlay__title {
+  position: relative;
+  font-size: 48px;
+  color: #ffff5f;
+  text-shadow:
+    0 0 20px rgba(255, 255, 100, 0.9),
+    0 0 40px rgba(255, 0, 255, 0.7);
+  margin-bottom: 12px;
+  z-index: 1;
+}
+
+.retro-overlay__subtitle {
+  position: relative;
+  font-size: 22px;
+  color: #00ffff;
+  margin-bottom: 10px;
+  z-index: 1;
+}
+
+.retro-overlay__details {
+  position: relative;
+  font-size: 16px;
+  color: #f8f8ff;
+  letter-spacing: 0.1em;
+  z-index: 1;
+}
+
+.retro-overlay--fail .retro-overlay__panel {
+  background: linear-gradient(135deg, rgba(120, 0, 70, 0.95), rgba(255, 120, 0, 0.95));
+  border-color: rgba(255, 0, 0, 0.85);
+  box-shadow:
+    0 0 40px rgba(255, 0, 0, 0.7),
+    0 0 90px rgba(255, 80, 0, 0.6);
+}
+
+.retro-overlay--fail .retro-overlay__title {
+  color: #ff3b3b;
+  text-shadow:
+    0 0 25px rgba(255, 59, 59, 0.9),
+    0 0 55px rgba(255, 150, 0, 0.8);
+}
+
+.retro-overlay--fail .retro-overlay__subtitle {
+  color: #ffd200;
+}
+
+.retro-overlay--fail .retro-overlay__details {
+  color: #ffe8c5;
+}
+
+.retro-overlay--success .retro-overlay__title {
+  color: #00ffcf;
+}
+
+.retro-overlay--success .retro-overlay__subtitle {
+  color: #ff9dff;
+}
+
+.retro-overlay--success .retro-overlay__details {
+  color: #f3f7ff;
+}
+
+.retro-fail-anim .retro-badge {
+  animation: retroBadgeFail 2.8s ease forwards;
+}
+
+@keyframes retroBadgeFail {
+  0% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+  40% {
+    transform: scale(1.4) rotate(12deg);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.2) rotate(-28deg);
+    opacity: 0.1;
+  }
+}
