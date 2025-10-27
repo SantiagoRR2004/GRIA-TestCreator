@@ -139,7 +139,10 @@ function switchStyle() {
   // Get the preferred style name for the next base style
   const nextStyleName = getPreferredStyleForBase(nextBaseStyle);
 
-  // Apply the new style
+  // Clean up previous style scripts and effects
+  unloadStyleScripts();
+
+  // Remove previous styles
   const existingLinks = document.querySelectorAll("link[data-style-switcher]");
   existingLinks.forEach((link) => link.remove());
 
@@ -150,6 +153,9 @@ function switchStyle() {
     link.href = stylePath;
     link.setAttribute("data-style-switcher", "true");
     document.head.appendChild(link);
+
+    // Load associated JavaScript file if it exists
+    loadStyleScript(stylePath);
 
     // Save the new current style (save the path, not the name)
     saveCurrentStyle(stylePath);
@@ -168,13 +174,57 @@ function switchStyle() {
     updateThemeButtonImage();
 
     console.log(`Switched to style: ${nextStyleName} (${stylePath})`);
+
+    // Reload the page to apply the new style cleanly
+    location.reload();
   }
+}
+
+// Load JavaScript file associated with a style
+function loadStyleScript(stylePath) {
+  // Convert CSS path to JS path (e.g., "styles/Dark Souls.css" -> "styles/Dark Souls.js")
+  const jsPath = stylePath.replace(/\.css$/i, ".js");
+  
+  // Check if a JS file exists by trying to load it
+  const script = document.createElement("script");
+  script.src = jsPath;
+  script.setAttribute("data-style-script", "true");
+  script.onerror = function() {
+    // JS file doesn't exist, silently remove the script tag
+    script.remove();
+  };
+  document.head.appendChild(script);
+  
+  console.log(`Attempting to load style script: ${jsPath}`);
+}
+
+// Unload all style scripts and clean up their effects
+function unloadStyleScripts() {
+  // Call cleanup function if the current style has one
+  if (typeof window.styleCleanup === 'function') {
+    try {
+      window.styleCleanup();
+      console.log("Style cleanup function executed");
+    } catch (error) {
+      console.warn("Error during style cleanup:", error);
+    }
+    delete window.styleCleanup;
+  }
+  
+  // Remove all script tags associated with styles
+  const existingScripts = document.querySelectorAll("script[data-style-script]");
+  existingScripts.forEach((script) => script.remove());
+  
+  console.log("Unloaded style scripts");
 }
 
 // Apply the current style from session storage
 function applyCurrentStyle() {
   const currentStylePath = getCurrentStyle();
   if (currentStylePath) {
+    // Clean up previous style scripts and effects
+    unloadStyleScripts();
+    
     // Remove any existing style switcher links
     const existingLinks = document.querySelectorAll(
       "link[data-style-switcher]",
@@ -202,6 +252,9 @@ function applyCurrentStyle() {
       link.href = currentStylePath;
       link.setAttribute("data-style-switcher", "true");
       document.head.appendChild(link);
+      
+      // Load associated JavaScript file if it exists
+      loadStyleScript(currentStylePath);
 
       console.log(`Applied current style: ${currentStylePath}`);
     }
@@ -247,6 +300,9 @@ function applyThemeBasedOnPreference() {
     return;
   }
 
+  // Clean up previous style scripts and effects
+  unloadStyleScripts();
+
   // Apply the target style
   const existingLinks = document.querySelectorAll("link[data-style-switcher]");
   existingLinks.forEach((link) => link.remove());
@@ -258,6 +314,9 @@ function applyThemeBasedOnPreference() {
     link.href = stylePath;
     link.setAttribute("data-style-switcher", "true");
     document.head.appendChild(link);
+
+    // Load associated JavaScript file if it exists
+    loadStyleScript(stylePath);
 
     // Save the new current style
     saveCurrentStyle(stylePath);
